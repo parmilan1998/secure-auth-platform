@@ -4,6 +4,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
 import authRouter from "./routes/auth.route";
+import userRouter from "./routes/user.route";
 
 const app = express();
 
@@ -17,5 +18,6 @@ app.use(cookieParser());
 
 // Routes
 app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/user", userRouter);
 
 export default app;
